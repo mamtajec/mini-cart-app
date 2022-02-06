@@ -1,0 +1,31 @@
+.mini-cart-container {
+    width: 100%;
+    position: fixed;
+    top: 5.5rem;
+    background-color: #88b0b4;
+    border-radius: 3px;
+
+    &:before {
+        content: "";
+        position: absolute;
+        top: -16px;
+        right: 40px;
+        width: 0;
+        height: 0;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-bottom: 15px solid #88b0b4;
+    }
+    .empty {
+        text-align: center;
+        padding: 25px 0;
+    }
+
+    .product {
+        &-item {
+            .close {
+                margin-right: 20px;
+            }
+        }
+    }
+}

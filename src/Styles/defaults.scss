@@ -1,0 +1,16 @@
+// Functions
+@function rem($pxValue, $font-size: 16){
+    @return $pxValue / $font-size * 1rem;
+}
+
+// Default classes
+.btn {
+    appearance: none;
+    background-color: transparent;
+    border: none;
+    cursor:pointer;
+    
+    &[disabled] {
+        cursor: default;
+    }
+}

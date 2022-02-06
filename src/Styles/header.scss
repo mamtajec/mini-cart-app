@@ -1,0 +1,26 @@
+.header {
+    height: 4rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    border-bottom: 5px solid #999999;
+    padding-right: 10px;
+
+    button {
+        .downward-arrow {
+            vertical-align: bottom;
+        }    
+        .is-cart {
+            width: 30px;
+            height: auto;
+        }
+    }
+
+    &-data {
+        display: flex;
+        flex-direction: column;
+        span {
+            line-height: 16px;
+        }
+    }
+}
