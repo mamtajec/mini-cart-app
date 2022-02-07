@@ -5,63 +5,71 @@
         
 
     }
+
     &-item {
         display: flex;
         justify-content: space-around;
-        padding: 20px;
-        border-bottom: 2px solid #999999;
+        padding: rem(20);
+        border-bottom: rem(2) solid $grey-color;
         align-items: center;
 
-        .item {
-
-            &-image {
-                height: auto;
-                width: auto;
-                margin: 0 10px;
-            }
-
-            &-details {
-                display: grid;
-                flex: 1;
-
-                .product {
-                    &-details, &-desc {
-                        max-height: 20px;
-                        white-space: nowrap;
-                        text-overflow: ellipsis;
-                        overflow: hidden;
-                    }
-
-                }
-
-                
-            }
-
-            &-quantity {
-                display: flex;
-                padding: 0 20px;
-
-                .is-add {
-                    transform: rotateZ(45deg);
-                    height: 8px;
-                }
-                .is-delete {
-                    height: 10px;
-                }
-                
-            }
-            &-count {
-                width: 18px;
-                height: 14px;
-                font-size: 10px;
-                text-align: right;
-                border: 1px solid #999999;
-                padding: 0 2px;
-            }
-
-            &-price {
-            }
-
+        &:focus {
+            outline: none;
         }
     }
+
+    &-image {
+        height: auto;
+        width: auto;
+        margin: 0 rem(10);
+    }
+
+    &-details {
+        display: grid;
+        flex: 1;
+                
+    }
+
+    &-title {
+        font-size: rem(18);
+        font-weight: 600;
+    }
+
+    &-title, &-desc {
+        max-height: rem(20);
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+
+    &-quantity {
+        display: flex;
+        padding: 0 rem(20);
+
+        .is-add img {
+            transform: rotateZ(45deg);
+            height: rem(8);
+        }
+        .is-delete img {
+            height: rem(10);
+        }
+        
+    }
+
+    &-count {
+        width: rem(18);
+        height: rem(20);
+        font-size: rem(14);
+        text-align: right;
+        border: rem(1) solid $grey-color;
+        padding: 0 rem(2);
+    }
+
+    &-price {
+        font-weight: 600;
+    }
+
+
+
+    
 }

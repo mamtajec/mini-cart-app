@@ -11,7 +11,7 @@ const staticData = {
       "title": "Product 1",
       "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
       "image": "/product1.jpeg",
-      "price": "20",
+      "price": "39",
       "currency": "$"
     },
     {

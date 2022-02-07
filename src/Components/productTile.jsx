@@ -18,22 +18,24 @@ function ProductTile(props) {
 
     return ( 
         <>
-        <div className="product-item" tabIndex="0">
-            <img className="item-image" src={require(`./../assets${product.image}`)} alt=""/>
-            <div className="item-details">
+        <div className="product-item" id={product.id} tabIndex="0">
+            <img className="product-image" src={require(`./../assets${product.image}`)} alt=""/>
+            <div className="product-details">
                 <span className="product-title">{product.title}</span>
                 <span className="product-desc">{product.desc}</span>
             </div>
-            <div className="item-quantity">
-                <button className="btn" onClick={handleDecrement} disabled={!cartCountData[product.id]}>
-                    <img className="is-delete" src={require('./../assets/delete.png')} alt=""/>
+            <div className="product-quantity">
+                <button className="btn is-delete" onClick={handleDecrement} disabled={!cartCountData[product.id]}>
+                    <span className="is-sr-only">decrease product count</span>
+                    <img src={require('./../assets/delete.png')} alt=""/>
                 </button>
-                <div className="item-count">{cartCountData && cartCountData[product.id]}</div>
-                <button className="btn" onClick={handleIncrement}>
-                    <img className="is-add" src={require('./../assets/close.png')} alt=""/>
+                <div className="product-count">{cartCountData && cartCountData[product.id]}</div>
+                <button className="btn is-add" onClick={handleIncrement}>
+                    <span className="is-sr-only">increase product count</span>
+                    <img src={require('./../assets/close.png')} alt=""/>
                 </button>
                 </div>
-            <p className="item-price">{product.currency}{product.price}</p>
+            <p className="product-price">{product.currency}{product.price}</p>
         </div>
         </>
      );

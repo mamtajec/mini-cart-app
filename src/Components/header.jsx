@@ -20,13 +20,15 @@ function Header() {
 
     return ( 
     <header className="header">
+        <h1 className="is-sr-only">Mini cart page</h1>
        <div className="header-data">
            <span>${totalCartAmount()}</span>
            <span>{totalCartCount} Items</span>
        </div>
-       <button className="btn" onClick={handleCartClick}>
-           <img className="downward-arrow" src={require('./../assets/downward-arrow.png')} alt=""/>
-           <img className="is-cart" src={require("./../assets/cart.png")} alt=""/>
+       <button className="btn is-cart" onClick={handleCartClick} aria-haspopup="true" aria-expanded={showMiniCart ? true : false}>
+           <span className="is-sr-only">mini cart</span>
+           <img src={require('./../assets/downward-arrow.png')} alt=""/>
+           <img src={require("./../assets/cart.png")} alt=""/>
         </button>       
     </header> 
     );

@@ -1,7 +1,11 @@
 // Functions
 @function rem($pxValue, $font-size: 16){
-    @return $pxValue / $font-size * 1rem;
+    @return calc($pxValue / $font-size) * 1rem;
 }
+
+// Variables
+$grey-color: #999999;
+$custom-cyan-color: #88b0b4;
 
 // Default classes
 .btn {
@@ -13,4 +17,19 @@
     &[disabled] {
         cursor: default;
     }
+
+    &:focus {
+        outline: none;
+    }
+}
+.is-sr-only {
+    position: absolute;
+    width: rem(1);
+    height: rem(1);
+    padding: 0;
+    margin: rem(-1);
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+
 }

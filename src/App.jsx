@@ -3,6 +3,7 @@ import Header from './Components/header';
 import MiniCartMenu from './Components/miniCartMenu';
 import ProductGrid from './Components/productGrid';
 import useCartData from './Hooks/useCartData';
+import { select } from './Utils/helpers';
 
 export const ProductContext = createContext({
   productsList: [],
@@ -34,6 +35,10 @@ function App(props) {
     Object.values(cartCountData).reduce((a, b) => a + b) == 0 && setshowMiniCart(false)
     cartCountData && localStorage.setItem("cartData", JSON.stringify(cartCountData))
   }, [cartCountData]);
+
+  useEffect(() => {
+    select('.btn', '.header').focus()
+  }, []);
 
 
   return (

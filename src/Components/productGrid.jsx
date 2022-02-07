@@ -7,7 +7,7 @@ function ProductGrid() {
     const { productsList } = useContext(ProductContext)
 
     useEffect(() => {
-
+        
     }, []);
 
     return ( 

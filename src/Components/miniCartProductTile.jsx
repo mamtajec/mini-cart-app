@@ -12,17 +12,18 @@ function MiniCartProductTile(props) {
     }
 
     return ( 
-        <div className="product-item" tabIndex="0">
+        <div className="product-item" id={`mini-${product.id}`} tabIndex="0">
         <div className="close">
-            <button className="btn" onClick={removeProduct}>
+            <button className="btn is-close" onClick={removeProduct}>
+                <span className="is-sr-only">remove product</span>
                 <img src={require("./../assets/close.png")}/>
             </button>
         </div>
-        <div className="item-details">
+        <div className="product-details">
             <span className="product-title">{product.title}</span>
-            <span className="item-price">{product.currency}{totalProductAmount}</span>
+            <span className="product-price">{product.currency}{totalProductAmount}</span>
         </div>
-        <div className="item-quantity">Qty {cartCountData[product.id]}</div>
+        <div className="product-quantity">Qty {cartCountData[product.id]}</div>
         </div>
      );
 }

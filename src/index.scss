@@ -1,7 +1,7 @@
-@use "./Styles/header";
-@use "./Styles/products";
-@use "./Styles/defaults";
-@use "./Styles/miniCart";
+@import "./Styles/defaults";
+@import "./Styles/header";
+@import "./Styles/products";
+@import "./Styles/miniCart";
 
 html, body {
   height: 100%;
@@ -10,9 +10,7 @@ html, body {
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Segoe UI', 'Roboto', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

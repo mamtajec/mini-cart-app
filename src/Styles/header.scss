@@ -1,17 +1,19 @@
 .header {
+    z-index: 7;
+    position: relative;
     height: 4rem;
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    border-bottom: 5px solid #999999;
-    padding-right: 10px;
+    border-bottom: rem(5) solid $grey-color;
+    padding-right: rem(10);
 
-    button {
-        .downward-arrow {
+    button.is-cart img{
+        &:first-child {
             vertical-align: bottom;
         }    
-        .is-cart {
-            width: 30px;
+        &:last-child {
+            width: rem(30);
             height: auto;
         }
     }
@@ -20,7 +22,7 @@
         display: flex;
         flex-direction: column;
         span {
-            line-height: 16px;
+            line-height: rem(16);
         }
     }
 }
